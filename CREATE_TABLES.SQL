@@ -11,7 +11,7 @@ CREATE TABLE hotels (
 -- 2. Tabella REVIEWERS: contiene le nazionalità univoche dei recensori
 CREATE TABLE reviewers (
     reviewer_id INT AUTO_INCREMENT PRIMARY KEY,
-    reviewer_nationality VARCHAR(100) 
+    reviewer_nationality VARCHAR(100) NOT NULL
 );
 
 -- 3. Tabella HOTEL_STATS: statistiche aggregate per hotel 
