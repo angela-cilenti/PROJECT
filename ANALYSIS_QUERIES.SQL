@@ -23,7 +23,8 @@ SELECT rw.reviewer_nationality, COUNT(r.review_id) AS numero_recensioni, AVG(r.r
 FROM reviews AS r
 JOIN reviewers AS rw ON r.reviewer_id = rw.reviewer_id
 GROUP BY rw.reviewer_nationality
-ORDER BY numero_recensioni DESC;
+ORDER BY numero_recensioni DESC
+LIMIT(10);
 
 /*I dati confermano che il dataset parla principalmente inglese, con il Regno Unito che domina la classifica. Incrociando la provenienza con il voto medio, si nota che nazionalità diverse giudicano la stessa esperienza in modi differenti: questo ci dice che le aspettative culturali cambiano molto il punteggio finale.*/
 
