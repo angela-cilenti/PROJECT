@@ -42,7 +42,7 @@ Abbiamo riprodotto le stesse query analitiche su entrambi i sistemi per validare
 
 *4. Visualizzazione Dati*
 
-Sono stati generati e salvati 10 grafici PNG ad alta risoluzione che mostrano:
+Sono stati generati e salvati 8 grafici PNG ad alta risoluzione che mostrano:
 - Andamento cronologico delle recensioni (Line Plot).
 - Distribuzione geografica per nazionalità e città (Bar Charts).
 - Variabilità degli score tra le top nazioni (Box Plots).
