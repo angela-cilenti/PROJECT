@@ -55,10 +55,14 @@ PROJECT/
 **INSIGHT E CONCLUSIONI ANALITICHE**
 
 L'analisi integrata dei dati ha permesso di estrarre evidenze strategiche sul comportamento dei viaggiatori e sulla qualità dell'offerta alberghiera europea:
-**Il Fattore Londra e il Mercato UK:*+ Londra non è solo la città più presente nel dataset, ma i viaggiatori britannici rappresentano quasi il 48% della contribuzione totale. 
+
+**Il Fattore Londra e il Mercato UK:** Londra non è solo la città più presente nel dataset, ma i viaggiatori britannici rappresentano quasi il 48% della contribuzione totale. 
 Questo indica che il sentiment globale del dataset è fortemente influenzato dagli standard e dalle aspettative del mercato anglosassone.
+
 **Eccellenza Continentale:** Nonostante i volumi inferiori, le città di Vienna e Barcellona (e in generale Austria e Spagna) 
 mostrano punteggi medi costantemente più alti rispetto a Londra e Parigi. Questo suggerisce un'efficienza superiore o una percezione di "valore per il prezzo" più favorevole nelle destinazioni continentali e mediterranee.
+
 **Psicologia del Recensore:** La correlazione inversa tra punteggio e verbosità è netta: le recensioni negative (fascia 1-4) hanno una lunghezza media di 57 parole, 
 contro le 31 parole di quelle eccellenti (fascia 9-10). Chi vive un'esperienza negativa sente il bisogno di giustificare il proprio voto con dettagli minuziosi, mentre il cliente soddisfatto tende alla sintesi.
+
 **Sentiment e Coerenza:** L'indice di Sentiment Base creato ha confermato che, nonostante i critici siano più rumorosi, la "pancia" del mercato è ampiamente positiva, con una stabilità dei voti che riflette una gestione professionale e consolidata degli hotel di lusso analizzati.
