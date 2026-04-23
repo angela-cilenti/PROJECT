@@ -44,12 +44,19 @@ Correlazioni tra variabili numeriche (Heatmap e Scatter Plots).
 
 PROJECT/
 ├── 01_EDA_CLEANING.ipynb          # Pulizia dati e variabili derivate
+
 ├── 02_ANALYSIS_PANDAS_PLOTS.ipynb # Analisi avanzata e visualizzazioni
+
 ├── CREATE_TABLES.sql              # Script creazione schema database
-├── INSERT_DATA.sql                # Script popolamento (estratto)
+
+├── INSERT_DATA.sql                # Script popolamento 
+
 ├── ANALYSIS_QUERIES.sql           # Raccolta delle query SQL di analisi
+
 ├── DATASET.csv                    # Versione pulita del dataset per SQL
+
 ├── FINAL_REPORT.pdf               # Relazione finale con insight e conclusioni
+
 └── README.md                      # Istruzioni e documentazione
 
 **INSIGHT E CONCLUSIONI ANALITICHE**
