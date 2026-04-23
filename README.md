@@ -43,6 +43,7 @@ Correlazioni tra variabili numeriche (Heatmap e Scatter Plots).
 **STRUTTURA DEL REPOSITORY**
 
 PROJECT/
+
 ├── 01_EDA_CLEANING.ipynb          # Pulizia dati e variabili derivate
 
 ├── 02_ANALYSIS_PANDAS_PLOTS.ipynb # Analisi avanzata e visualizzazioni
