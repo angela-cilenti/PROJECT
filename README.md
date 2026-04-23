@@ -1,44 +1,52 @@
 **HOTEL E REVIEWS ANALYSIS: DATA PIPELINE & VISUALIZATION**
 
 **DESCRIZIONE DEL PROGETTO**
+
 Questo progetto analizza un dataset di oltre 515.000 recensioni relative a 1.493 hotel di lusso in Europa nel periodo 2015-2017. 
 L'obiettivo principale è stato costruire una pipeline completa: dalla pulizia dei dati grezzi su Python, 
 al popolamento di un database relazionale SQL, fino alla validazione e visualizzazione finale dei risultati.
 
 **TECNOLOGIE UTILIZZATE**
+
 **Python (Pandas, Matplotlib, Seaborn):** Per l'analisi dei dati e la visualizzazione.
+
 *+SQL (MariaDB/MySQL):** Per la progettazione dello schema relazionale e le query analitiche.
+
 **SQLAlchemy:** Per la sincronizzazione e il caricamento dei dati tra Python e SQL.
 
 **FASI DEL PROGETTO**
 
 *1. Preparazione e Pulizia dei Dati (Python)*
 
-Gestione dei valori mancanti e rimozione dei duplicati esatti.
-Conversione temporale e feature engineering (estrazione Anno/Mese).
-Esportazione del dataset normalizzato: hotel_reviews_clean.csv.
+- Gestione dei valori mancanti e rimozione dei duplicati esatti.
+- Conversione temporale e feature engineering (estrazione Anno/Mese).
+- Esportazione del dataset normalizzato: hotel_reviews_clean.csv.
 
 *2. Progettazione Database SQL*
 
-Creazione di uno schema relazionale ottimizzato composto dalle tabelle: hotels, reviewers, reviews e hotel_stats.
-Configurazione di Primary Keys e Foreign Keys per garantire l'integrità referenziale.
-Popolamento del database tramite pipeline Python automatizzata.
+- Creazione di uno schema relazionale ottimizzato composto dalle tabelle: hotels, reviewers, reviews e hotel_stats.
+- Configurazione di Primary Keys e Foreign Keys per garantire l'integrità referenziale.
+- Popolamento del database tramite pipeline Python automatizzata.
 
 *3. Analisi Cross-Platform (SQL vs Pandas)*
 
 Abbiamo riprodotto le stesse query analitiche su entrambi i sistemi per validare la coerenza dei dati:
+
 **Analisi Temporale:** Trend mensili e annuali del volume di recensioni.
+
 **Geografia & Nazionalità:** Ranking dei mercati dominanti (UK vs Resto del mondo) e distribuzione per città europee.
+
 **Performance:** Correlazione tra punteggi assegnati e verbosità (lunghezza) dei testi.
+
 **Feature Engineering Avanzata:** Sentiment base e Clustering delle città per qualità percepita.
 
 *4. Visualizzazione Dati*
 
 Sono stati generati e salvati 10 grafici PNG ad alta risoluzione che mostrano:
-Andamento cronologico delle recensioni (Line Plot).
-Distribuzione geografica per nazionalità e città (Bar Charts).
-Variabilità degli score tra le top nazioni (Box Plots).
-Correlazioni tra variabili numeriche (Heatmap e Scatter Plots).
+- Andamento cronologico delle recensioni (Line Plot).
+- Distribuzione geografica per nazionalità e città (Bar Charts).
+- Variabilità degli score tra le top nazioni (Box Plots).
+- Correlazioni tra variabili numeriche (Heatmap e Scatter Plots).
 
 **STRUTTURA DEL REPOSITORY**
 
