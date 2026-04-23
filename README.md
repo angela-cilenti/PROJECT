@@ -10,7 +10,7 @@ al popolamento di un database relazionale SQL, fino alla validazione e visualizz
 
 **Python (Pandas, Matplotlib, Seaborn):** Per l'analisi dei dati e la visualizzazione.
 
-*+SQL (MariaDB/MySQL):** Per la progettazione dello schema relazionale e le query analitiche.
+**SQL (MariaDB/MySQL):** Per la progettazione dello schema relazionale e le query analitiche.
 
 **SQLAlchemy:** Per la sincronizzazione e il caricamento dei dati tra Python e SQL.
 
