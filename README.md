@@ -39,13 +39,13 @@ Generazione di 8 grafici ad alta risoluzione finalizzati all'analisi di:
 L'analisi integrata ha permesso di evidenziare tre pillar fondamentali:
 
 *   **Il Mercato UK:** Londra è la città più presente e i viaggiatori britannici rappresentano il **48% del contributo totale**,
-*   influenzando pesantemente il sentiment globale del dataset.
+   influenzando pesantemente il sentiment globale del dataset.
   
 *   **Qualità Continentale:** Nonostante i volumi inferiori, **Vienna e Barcellona** mantengono punteggi medi superiori a Londra e Parigi,
-*   suggerendo un miglior rapporto qualità-prezzo percepito.
+    suggerendo un miglior rapporto qualità-prezzo percepito.
   
 *   **Psicologia del Recensore:** Esiste una **correlazione inversa tra voto e lunghezza del commento**. Le recensioni negative (score 1-4) sono
-*   in media l'80% più lunghe di quelle eccellenti (57 parole vs 31), confermando che l'insoddisfazione spinge a una maggiore argomentazione.
+    in media l'80% più lunghe di quelle eccellenti (57 parole vs 31), confermando che l'insoddisfazione spinge a una maggiore argomentazione.
 
 ---
 
