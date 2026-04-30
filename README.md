@@ -35,7 +35,7 @@ Generazione di 8 grafici ad alta risoluzione finalizzati all'analisi di:
 
 ---
 
-## 💡 Key Insights & Conclusioni
+## Key Insights & Conclusioni
 L'analisi integrata ha permesso di evidenziare tre pillar fondamentali:
 
 *   **Il Mercato UK:** Londra è la città più presente e i viaggiatori britannici rappresentano il **48% del contributo totale**,
