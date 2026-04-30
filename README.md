@@ -1,84 +1,73 @@
-**HOTEL E REVIEWS ANALYSIS: DATA PIPELINE & VISUALIZATION**
+# Hotel & Reviews Analysis: Data Pipeline & Visualization
 
-**DESCRIZIONE DEL PROGETTO**
+## Descrizione del Progetto
+Questo progetto analizza un dataset di oltre **515.000 recensioni** relative a 1.493 hotel di lusso in Europa (2015-2017). 
+L'obiettivo è la costruzione di una pipeline end-to-end: dalla pulizia dei dati grezzi in Python, al popolamento di un database relazionale SQL, fino alla generazione di insight strategici tramite data visualization.
 
-Questo progetto analizza un dataset di oltre 515.000 recensioni relative a 1.493 hotel di lusso in Europa nel periodo 2015-2017. 
-L'obiettivo principale è stato costruire una pipeline completa: dalla pulizia dei dati grezzi su Python, 
-al popolamento di un database relazionale SQL, fino alla validazione e visualizzazione finale dei risultati.
+## Tecnologie Utilizzate
+*   **Python:** Pandas, Matplotlib, Seaborn (Analisi e Visualizzazione).
+*   **SQL (MariaDB/MySQL):** Progettazione schema relazionale e query analitiche.
+*   **SQLAlchemy:** Integrazione e automazione del flusso dati Python-SQL.
 
-**TECNOLOGIE UTILIZZATE**
+## Fasi del Progetto
 
-**Python (Pandas, Matplotlib, Seaborn):** Per l'analisi dei dati e la visualizzazione.
+### 1. Data Preparation & Cleaning (Python)
+- Gestione valori mancanti e rimozione duplicati.
+- Feature Engineering: estrazione temporale (Anno/Mese) e normalizzazione del testo.
+- Esportazione dataset ottimizzato: `hotel_reviews_clean.csv`.
 
-**SQL (MariaDB/MySQL):** Per la progettazione dello schema relazionale e le query analitiche.
+### 2. Progettazione Database SQL
+- Architettura relazionale: tabelle `hotels`, `reviewers`, `reviews` e `hotel_stats`.
+- Implementazione di Integrità Referenziale (Primary & Foreign Keys).
+- Pipeline di caricamento automatizzata tramite SQLAlchemy.
 
-**SQLAlchemy:** Per la sincronizzazione e il caricamento dei dati tra Python e SQL.
+### 3. Validazione Cross-Platform (SQL vs Pandas)
+Confronto metodologico tramite l'esecuzione delle stesse query analitiche su entrambi i sistemi per garantire la coerenza del dato su:
+- Trend temporali del volume di recensioni.
+- Ranking geografico e distribuzione per città.
+- Correlazione tra score e verbosità dei testi.
 
-**FASI DEL PROGETTO**
+### 4. Data Visualization
+Generazione di 8 grafici ad alta risoluzione finalizzati all'analisi di:
+- Andamento cronologico e stagionalità.
+- Distribuzione per nazionalità e variabilità degli score (Box Plots).
+- Matrice di correlazione tra variabili numeriche (Heatmap).
 
-*1. Preparazione e Pulizia dei Dati (Python)*
+---
 
-- Gestione dei valori mancanti e rimozione dei duplicati esatti.
-- Conversione temporale e feature engineering (estrazione Anno/Mese).
-- Esportazione del dataset normalizzato: hotel_reviews_clean.csv.
+## 💡 Key Insights & Conclusioni
+L'analisi integrata ha permesso di evidenziare tre pillar fondamentali:
 
-*2. Progettazione Database SQL*
+*   **Il Mercato UK:** Londra è la città più presente e i viaggiatori britannici rappresentano il **48% del contributo totale**,
+*   influenzando pesantemente il sentiment globale del dataset.
+  
+*   **Qualità Continentale:** Nonostante i volumi inferiori, **Vienna e Barcellona** mantengono punteggi medi superiori a Londra e Parigi,
+*   suggerendo un miglior rapporto qualità-prezzo percepito.
+  
+*   **Psicologia del Recensore:** Esiste una **correlazione inversa tra voto e lunghezza del commento**. Le recensioni negative (score 1-4) sono
+*   in media l'80% più lunghe di quelle eccellenti (57 parole vs 31), confermando che l'insoddisfazione spinge a una maggiore argomentazione.
 
-- Creazione di uno schema relazionale ottimizzato composto dalle tabelle: hotels, reviewers, reviews e hotel_stats.
-- Configurazione di Primary Keys e Foreign Keys per garantire l'integrità referenziale.
-- Popolamento del database tramite pipeline Python automatizzata.
+---
 
-*3. Analisi Cross-Platform (SQL vs Pandas)*
-
-Abbiamo riprodotto le stesse query analitiche su entrambi i sistemi per validare la coerenza dei dati:
-
-**Analisi Temporale:** Trend mensili e annuali del volume di recensioni.
-
-**Geografia & Nazionalità:** Ranking dei mercati dominanti (UK vs Resto del mondo) e distribuzione per città europee.
-
-**Performance:** Correlazione tra punteggi assegnati e verbosità (lunghezza) dei testi.
-
-**Feature Engineering Avanzata:** Sentiment base e Clustering delle città per qualità percepita.
-
-*4. Visualizzazione Dati*
-
-Sono stati generati e salvati 8 grafici PNG ad alta risoluzione che mostrano:
-- Andamento cronologico delle recensioni (Line Plot).
-- Distribuzione geografica per nazionalità e città (Bar Charts).
-- Variabilità degli score tra le top nazioni (Box Plots).
-- Correlazioni tra variabili numeriche (Heatmap e Scatter Plots).
-
-**STRUTTURA DEL REPOSITORY**
-
+## 📁 Struttura della Repository
+```text
 PROJECT/
+├── 01_EDA_CLEANING.ipynb          # Notebook: Pulizia e preprocessing
 
-├── 01_EDA_CLEANING.ipynb          # Pulizia dati e variabili derivate
+├── 02_ANALYSIS_PANDAS_PLOTS.ipynb # Notebook: Analisi e visualizzazioni
 
-├── 02_ANALYSIS_PANDAS_PLOTS.ipynb # Analisi avanzata e visualizzazioni
+├── CREATE_TABLES.sql              # Schema DDL del database
 
-├── CREATE_TABLES.sql              # Script creazione schema database
+├── INSERT_DATA.sql                # Script di popolamento
 
-├── INSERT_DATA.sql                # Script popolamento 
+├── ANALYSIS_QUERIES.sql           # Query SQL analitiche
 
-├── ANALYSIS_QUERIES.sql           # Raccolta delle query SQL di analisi
+├── DATASET.csv                    # Dataset normalizzato
 
-├── DATASET.csv                    # Versione pulita del dataset per SQL
+├── FINAL_REPORT.pdf               # Report completo con grafici e conclusioni estese
 
-├── FINAL_REPORT.pdf               # Relazione finale con insight e conclusioni
+└── README.md                      # Documentazione di progetto
+```
 
-└── README.md                      # Istruzioni e documentazione
+> **Nota:** Per una visione dettagliata di tutti i grafici e dell'analisi completa, consultare il file [FINAL_REPORT.pdf](./FINAL_REPORT.pdf).
 
-**INSIGHT E CONCLUSIONI ANALITICHE**
-
-L'analisi integrata dei dati ha permesso di estrarre evidenze strategiche sul comportamento dei viaggiatori e sulla qualità dell'offerta alberghiera europea:
-
-**Il Fattore Londra e il Mercato UK:** Londra non è solo la città più presente nel dataset, ma i viaggiatori britannici rappresentano quasi il 48% della contribuzione totale. 
-Questo indica che il sentiment globale del dataset è fortemente influenzato dagli standard e dalle aspettative del mercato anglosassone.
-
-**Eccellenza Continentale:** Nonostante i volumi inferiori, le città di Vienna e Barcellona (e in generale Austria e Spagna) 
-mostrano punteggi medi costantemente più alti rispetto a Londra e Parigi. Questo suggerisce un'efficienza superiore o una percezione di "valore per il prezzo" più favorevole nelle destinazioni continentali e mediterranee.
-
-**Psicologia del Recensore:** La correlazione inversa tra punteggio e verbosità è netta: le recensioni negative (fascia 1-4) hanno una lunghezza media di 57 parole, 
-contro le 31 parole di quelle eccellenti (fascia 9-10). Chi vive un'esperienza negativa sente il bisogno di giustificare il proprio voto con dettagli minuziosi, mentre il cliente soddisfatto tende alla sintesi.
-
-**Sentiment e Coerenza:** L'indice di Sentiment Base creato ha confermato che, nonostante i critici siano più rumorosi, la "pancia" del mercato è ampiamente positiva, con una stabilità dei voti che riflette una gestione professionale e consolidata degli hotel di lusso analizzati.
